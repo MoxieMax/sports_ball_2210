@@ -2,7 +2,7 @@ require 'rspec'
 require './lib/player'
 
 RSpec.describe Player do
-  let (:player_1) {Player.new("Michael Palledorous" , 1000000, 36)}
+  let (:player_1) {Player.new("Michael Palledorous", 1000000, 36)}
   it 'exists' do
     expect(player_1).to be_a Player
   end

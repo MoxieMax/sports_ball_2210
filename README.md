@@ -1,47 +1,3 @@
-```
-
-## Iteration 2
-
-Use TDD to create a `Team` class that responds to the following interaction
-pattern:
-
-(Where you see something like `#<Team:0x00007fccd30375f8...>`, this is
-shorthand for a full team object with that object identifier - we have
-replaced any attributes with `...` for readability.)
-
-```ruby
-pry(main)> require './lib/player'
-#=> true
-
-pry(main)> require './lib/team'
-#=> true
-
-pry(main)> team = Team.new("Dodgers", "Los Angeles")
-#=> #<Team:0x00007fccd30375f8...>
-
-pry(main)> team.roster
-#=> []
-
-pry(main)> team.player_count
-#=> 0
-
-pry(main)> player_1 = Player.new("Michael Palledorous" , 1000000, 36)
-#=> #<Player:0x00007fa53b9ca0a8...>
-
-pry(main)> player_2 = Player.new("Kenny DeNunez", 500000, 24)
-#=> #<Player:0x00007fccd2985f48...>
-
-pry(main)> team.add_player(player_1)
-
-pry(main)> team.add_player(player_2)
-
-pry(main)> team.roster
-#=> [#<Player:0x00007fa53b9ca0a8...>, #<Player:0x00007fccd2985f48...>]
-
-pry(main)> team.player_count
-#=> 2
-```
-
 ## Iteration 3
 
 Use TDD to update your `Team` class so that it responds to the following interaction pattern: 
@@ -188,3 +144,48 @@ pry(main)> player.set_nickname!("Squints")
 
 pry(main)> player.nickname
 #=> "Squints
+
+```
+
+## Iteration 2
+
+Use TDD to create a `Team` class that responds to the following interaction
+pattern:
+
+(Where you see something like `#<Team:0x00007fccd30375f8...>`, this is
+shorthand for a full team object with that object identifier - we have
+replaced any attributes with `...` for readability.)
+
+```ruby
+pry(main)> require './lib/player'
+#=> true
+
+pry(main)> require './lib/team'
+#=> true
+
+pry(main)> team = Team.new("Dodgers", "Los Angeles")
+#=> #<Team:0x00007fccd30375f8...>
+
+pry(main)> team.roster
+#=> []
+
+pry(main)> team.player_count
+#=> 0
+
+pry(main)> player_1 = Player.new("Michael Palledorous" , 1000000, 36)
+#=> #<Player:0x00007fa53b9ca0a8...>
+
+pry(main)> player_2 = Player.new("Kenny DeNunez", 500000, 24)
+#=> #<Player:0x00007fccd2985f48...>
+
+pry(main)> team.add_player(player_1)
+
+pry(main)> team.add_player(player_2)
+
+pry(main)> team.roster
+#=> [#<Player:0x00007fa53b9ca0a8...>, #<Player:0x00007fccd2985f48...>]
+
+pry(main)> team.player_count
+#=> 2
+```
+
