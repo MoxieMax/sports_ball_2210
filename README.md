@@ -1,54 +1,3 @@
-# Sports Ball
-
-## Instructions
-
-* Fork this Repository
-* Clone YOUR fork
-* Complete the activity below
-* Push your solution to a fork
-* Submit a pull request from your repository to the `turingschool-examples` repository
-* Make sure to put your name in your PR!
-
-## Iteration 1
- 
-Start with the existing tests, and then use TDD to create a `Player` class that responds to the 
-following interaction pattern. You are expected to write your own tests for the `set_nickname!` and `nickname` methods.
-
-(Where you see something like `#<Playerr:0x00007fccd30375f8...>`, this is
-shorthand for a full player object with that object identifier - we have
-replaced any attributes with `...` for readability.)
-
-Notes: Contract length is in months, and the total cost is the contract length multiplied by the monthly cost.
-
-```ruby
-pry(main)> require './lib/player'
-#=> true
-
-pry(main)> player = Player.new("Michael Palledorous" , 1000000, 36)
-#=> #<Player:0x00007fa53b9ca0a8...>
-
-pry(main)> player.first_name
-#=> "Michael"
-
-pry(main)> player.last_name
-#=> "Palledorous"
-
-pry(main)> player.monthly_cost
-#=> 1000000
-
-pry(main)> player.contract_length
-#=> 36
-
-pry(main)> player.total_cost
-#=> 36000000
-
-pry(main)> player.nickname
-#=> nil
-
-pry(main)> player.set_nickname!("Squints")
-
-pry(main)> player.nickname
-#=> "Squints
 ```
 
 ## Iteration 2
@@ -188,3 +137,54 @@ pry(main)> team.average_cost_of_player
 pry(main)> team.players_by_last_name
 #=> "DeNunez, McClennan, Palledorous, Porter"
 ```
+# Sports Ball
+
+## Instructions
+
+* Fork this Repository
+* Clone YOUR fork
+* Complete the activity below
+* Push your solution to a fork
+* Submit a pull request from your repository to the `turingschool-examples` repository
+* Make sure to put your name in your PR!
+
+## Iteration 1
+ 
+Start with the existing tests, and then use TDD to create a `Player` class that responds to the 
+following interaction pattern. You are expected to write your own tests for the `set_nickname!` and `nickname` methods.
+
+(Where you see something like `#<Playerr:0x00007fccd30375f8...>`, this is
+shorthand for a full player object with that object identifier - we have
+replaced any attributes with `...` for readability.)
+
+Notes: Contract length is in months, and the total cost is the contract length multiplied by the monthly cost.
+
+```ruby
+pry(main)> require './lib/player'
+#=> true
+
+pry(main)> player = Player.new("Michael Palledorous" , 1000000, 36)
+#=> #<Player:0x00007fa53b9ca0a8...>
+
+pry(main)> player.first_name
+#=> "Michael"
+
+pry(main)> player.last_name
+#=> "Palledorous"
+
+pry(main)> player.monthly_cost
+#=> 1000000
+
+pry(main)> player.contract_length
+#=> 36
+
+pry(main)> player.total_cost
+#=> 36000000 -->
+
+<!-- pry(main)> player.nickname
+#=> nil
+
+pry(main)> player.set_nickname!("Squints")
+
+pry(main)> player.nickname
+#=> "Squints
