@@ -48,11 +48,27 @@ RSpec.describe Player do
     end
     
     it 'can calculate the total value of the team' do
-      # binding.pry
       expect(team.total_value).to eq(85200000)
     end
     
     it 'can return the details of the team' do
+    end
+  end
+  
+  describe 'iteration 4' do
+    before(:each) do
+      team.add_player(player_1)
+      team.add_player(player_2)
+      team.add_player(player_3)
+      team.add_player(player_4)
+    end
+    
+    it 'can determine the average player cost' do
+      expect(team.average_cost_of_player).to eq("$21,300,000")
+    end
+    
+    it 'can return players sorted by last name' do
+      expect(team.players_by_last_name).to eq("DeNunez, McClennan, Palledorous, Porter")
     end
   end
 end

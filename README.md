@@ -1,46 +1,3 @@
-## Iteration 4
-
-Use TDD to update your `Team` class so that it responds to the following interaction pattern:
-
-* Players sorted by last name should be in descending alphabetical order.
-
-
-```ruby
-pry(main)> require './lib/player'
-#=> true
-
-pry(main)> require './lib/team'
-#=> true
-
-pry(main)> team = Team.new("Dodgers", "Los Angeles")
-#=> #<Team:0x00007fccd30375f8...>
-
-pry(main)> player_1 = Player.new("Michael Palledorous" , 1000000, 36)
-#=> #<Player:0x00007fa53b9ca0a8...>
-
-pry(main)> player_2 = Player.new("Kenny DeNunez", 500000, 24)
-#=> #<Player:0x00007fccd2985f48...>
-
-pry(main)> player_3 = Player.new("Alan McClennan", 750000, 48)
-#=> #<Player:0x00007fccd383c2d0...>
-
-pry(main)> player_4 = Player.new("Hamilton Porter", 100000, 12)
-#=> #<Player:0x00007fccd297dc30...>
-
-pry(main)> team.add_player(player_1)
-
-pry(main)> team.add_player(player_2)
-
-pry(main)> team.add_player(player_3)
-
-pry(main)> team.add_player(player_4)
-
-pry(main)> team.average_cost_of_player
-#=> "$21,300,000"
-
-pry(main)> team.players_by_last_name
-#=> "DeNunez, McClennan, Palledorous, Porter"
-```
 # Sports Ball
 
 ## Instructions
@@ -187,5 +144,46 @@ pry(main)> team.details
 #=> {"total_value" => 85200000, "player_count" => 4}
 
 ```
+## Iteration 4
+
+Use TDD to update your `Team` class so that it responds to the following interaction pattern:
+
+* Players sorted by last name should be in descending alphabetical order.
 
 
+```ruby
+pry(main)> require './lib/player'
+#=> true
+
+pry(main)> require './lib/team'
+#=> true
+
+pry(main)> team = Team.new("Dodgers", "Los Angeles")
+#=> #<Team:0x00007fccd30375f8...>
+
+pry(main)> player_1 = Player.new("Michael Palledorous" , 1000000, 36)
+#=> #<Player:0x00007fa53b9ca0a8...>
+
+pry(main)> player_2 = Player.new("Kenny DeNunez", 500000, 24)
+#=> #<Player:0x00007fccd2985f48...>
+
+pry(main)> player_3 = Player.new("Alan McClennan", 750000, 48)
+#=> #<Player:0x00007fccd383c2d0...>
+
+pry(main)> player_4 = Player.new("Hamilton Porter", 100000, 12)
+#=> #<Player:0x00007fccd297dc30...>
+
+pry(main)> team.add_player(player_1)
+
+pry(main)> team.add_player(player_2)
+
+pry(main)> team.add_player(player_3)
+
+pry(main)> team.add_player(player_4)
+
+pry(main)> team.average_cost_of_player
+#=> "$21,300,000"
+
+pry(main)> team.players_by_last_name
+#=> "DeNunez, McClennan, Palledorous, Porter"
+```

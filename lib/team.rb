@@ -43,4 +43,17 @@ class Team
     }
   end
   
+  def average_cost_of_player
+    avg = self.total_value / self.player_count
+    avg_string = avg.to_s.chars.reverse.each_slice(3).map(&:join).join(',').reverse
+    "$#{avg_string}"
+  end
+  
+  def players_by_last_name
+    by_last = []
+    self.roster.each do |player|
+      by_last << player.last_name
+    end
+    by_last.sort.join(', ')
+  end
 end
